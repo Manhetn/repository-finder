@@ -1,5 +1,5 @@
-import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
+import Nav from './components/Nav/Nav';
 import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import HomePage from './pages/HomePage/HomePage';
 import SearchPage from './pages/SearchPage/SearchPage';
@@ -7,7 +7,7 @@ import SearchPage from './pages/SearchPage/SearchPage';
 function App() {
   return (
     <>
-      <h1>App</h1>
+      <Nav />
       <Switch>
         <Route path="/search" component={SearchPage} />
         <Route path="/favorites" component={FavoritesPage} />
