@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import classes from './Nav.module.css';
+import classes from './Navigation.module.css';
 
 interface INavLink {
   title: string;
@@ -7,7 +7,7 @@ interface INavLink {
   exact: boolean;
 }
 
-const navLinks: Array<INavLink> = [
+const LINKS: Array<INavLink> = [
   {
     title: 'Home',
     href: '/',
@@ -15,7 +15,7 @@ const navLinks: Array<INavLink> = [
   },
   {
     title: 'Search',
-    href: '/quizzes',
+    href: '/search',
     exact: true
   },
   {
@@ -25,11 +25,11 @@ const navLinks: Array<INavLink> = [
   }
 ];
 
-const Nav = () => {
+const Navigation = () => {
   return (
     <nav className={classes.container}>
       <ul className={classes.list}>
-        {navLinks.map((link, index) => {
+        {LINKS.map((link, index) => {
           return (
             <li className={classes.item} key={link.title + '-' + index}>
               <NavLink
@@ -48,4 +48,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navigation;

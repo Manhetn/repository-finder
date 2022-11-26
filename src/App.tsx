@@ -1,13 +1,13 @@
 import { Redirect, Route, Switch } from 'react-router-dom';
-import Nav from './components/Nav/Nav';
 import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import HomePage from './pages/HomePage/HomePage';
 import SearchPage from './pages/SearchPage/SearchPage';
+import Navigation from './components/Navigation/Navigation';
 
 function App() {
   return (
     <>
-      <Nav />
+      <Navigation />
       <Switch>
         <Route path="/search" component={SearchPage} />
         <Route path="/favorites" component={FavoritesPage} />

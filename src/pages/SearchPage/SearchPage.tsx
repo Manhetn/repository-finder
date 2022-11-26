@@ -1,8 +1,13 @@
+import Container from '../../components/container';
+import SearchUsers from '../../components/SearchUsers/SearchUsers';
+
 const SearchPage = () => {
   return (
-    <>
-      <h1>SearchPage</h1>
-    </>
+    <Container>
+      <SearchUsers />
+      <h1>Search Page</h1>
+      <h1>Search Page</h1>
+    </Container>
   );
 };
 
