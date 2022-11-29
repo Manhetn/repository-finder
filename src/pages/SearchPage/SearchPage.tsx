@@ -1,12 +1,16 @@
 import Container from '../../components/container';
-import SearchUsers from '../../components/SearchUsers/SearchUsers';
+import FoundUser from '../../components/FoundUser/FoundUser';
+import UserSearch from '../../components/UserSearch/UserSearch';
+import useAppSelector from '../../hooks/redux';
+// import useAppSelector from '../../hooks/redux';
 
 const SearchPage = () => {
+  const { foundUser } = useAppSelector((state) => state.foundUser);
+
   return (
     <Container>
-      <SearchUsers />
-      <h1>Search Page</h1>
-      <h1>Search Page</h1>
+      <UserSearch />
+      {foundUser && <FoundUser foundUser={foundUser} />}
     </Container>
   );
 };

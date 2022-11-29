@@ -4,22 +4,24 @@ import classes from './Input.module.css';
 
 interface IInputProps {
   label?: string;
-  type: string;
+  type?: string;
   name: string;
   id?: string;
   value: string;
   onChange: (data: IInputData) => void;
   error?: string;
+  placeholder?: string;
 }
 
 const Input = ({
   label,
-  type,
+  type = 'text',
   name,
   id,
   value,
   onChange,
-  error
+  error,
+  placeholder
 }: IInputProps) => {
   const currentId: string = id || `${name}-Input}`;
 
@@ -43,6 +45,7 @@ const Input = ({
         name={name}
         value={value}
         onChange={handleChange}
+        placeholder={placeholder}
       />
       {error && <span className={classes.error}>{error}</span>}
     </div>
