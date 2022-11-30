@@ -23,7 +23,7 @@ const Input = ({
   error,
   placeholder
 }: IInputProps) => {
-  const currentId: string = id || `${name}-Input}`;
+  const currentId: string = id || `input-${name}-${type}`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
     onChange(getInputData(e));
