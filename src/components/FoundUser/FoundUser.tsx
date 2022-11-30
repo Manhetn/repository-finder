@@ -1,10 +1,9 @@
 // import { useEffect } from 'react';
 import { useEffect, useState } from 'react';
-import useAppSelector from '../../hooks/redux';
 import { IUser } from '../../models/models';
 import { useGetUserReposQuery } from '../../store/github/github.api';
-import Error from '../Error/Error';
-import Preloader from '../Preloader/Preloader';
+import Error from '../common/Error/Error';
+import Preloader from '../common/Preloader/Preloader';
 import RepoCard from '../RepoCard/RepoCard';
 import classes from './FoundUser.module.css';
 
@@ -13,6 +12,7 @@ interface IFoundUserProps {
 }
 const FoundUser = ({ foundUser }: IFoundUserProps) => {
   const [showList, setShowList] = useState(false);
+
   const {
     isError,
     isLoading,
@@ -25,7 +25,6 @@ const FoundUser = ({ foundUser }: IFoundUserProps) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.glass}></div>
       <div className={classes.header}>
         <a
           className={classes.link}

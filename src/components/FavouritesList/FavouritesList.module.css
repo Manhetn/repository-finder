@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.item {
+  margin: 8px;
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.item:first-child {
+  margin-top: 0;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+}

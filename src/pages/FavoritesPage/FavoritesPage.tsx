@@ -1,4 +1,5 @@
-import Container from '../../components/container';
+import Container from '../../components/common/Container/Container';
+import FavouritesList from '../../components/FavouritesList/FavouritesList';
 import RepoCard from '../../components/RepoCard/RepoCard';
 import useAppSelector from '../../hooks/redux';
 
@@ -8,18 +9,7 @@ const FavoritesPage = () => {
   return (
     <>
       <Container>
-        <h1>Favorites repositories</h1>
-        <div>
-          {favourites.map((repo, index) => {
-            return (
-              <RepoCard
-                repo={repo}
-                fullCard={true}
-                key={repo.id + '-' + index}
-              />
-            );
-          })}
-        </div>
+        <FavouritesList favourites={favourites} />
       </Container>
     </>
   );

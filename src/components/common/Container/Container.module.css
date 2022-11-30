@@ -1,0 +1,10 @@
+.box {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  max-width: 1260px;
+  min-height: calc(100vh - 178px);
+  margin: 0 auto;
+}
