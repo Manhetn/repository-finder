@@ -1,9 +1,16 @@
-import React from 'react';
+import Container from '../../components/common/Container/Container';
+import FavouritesList from '../../components/FavouritesList/FavouritesList';
+import RepoCard from '../../components/RepoCard/RepoCard';
+import useAppSelector from '../../hooks/redux';
 
 const FavoritesPage = () => {
+  const { favourites } = useAppSelector((state) => state.gitHub);
+
   return (
     <>
-      <h1>FavoritesPage</h1>
+      <Container>
+        <FavouritesList favourites={favourites} />
+      </Container>
     </>
   );
 };
