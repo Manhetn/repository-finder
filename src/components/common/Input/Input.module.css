@@ -2,16 +2,10 @@
   width: 100%;
   padding: 0 16px;
   box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
 }
 
 .label {
-  margin: 16px 0 16px;
-  cursor: pointer;
-  font-size: 24px;
-  line-height: 28px;
-  align-self: start;
+  font-size: 20px;
 }
 
 .input {
@@ -25,10 +19,4 @@
   outline: none;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
-}
-
-.error {
-  font-weight: 18px;
-  line-height: 24px;
-  color: red;
 }

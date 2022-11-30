@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import classes from './Container.module.css';
+import './index.css';
 
 interface IContainerProps {
   children: ReactNode;
 }
 
 const Container = ({ children }: IContainerProps) => {
-  return <div className={classes.box}>{children}</div>;
+  return <div className="container__main">{children}</div>;
 };
 
 export default Container;

@@ -3,7 +3,6 @@ import { IRepository } from '../../models/models';
 import useActions from '../../hooks/actions';
 import useAppSelector from '../../hooks/redux';
 import { useState } from 'react';
-import Button from '../common/Button/Button';
 
 interface IRepoCard {
   repo: IRepository;
@@ -51,15 +50,27 @@ const RepoCard = ({ repo, fullCard = false }: IRepoCard) => {
         target="_blank"
         rel="noreferrer"
       >
-        <h2 className={classes.name}>{repo.full_name}</h2>
+        <h2>{repo.full_name}</h2>
       </a>
       <p>Forks: {repo.forks}</p>
       <p>Watchers: {repo.watchers}</p>
-      <p className={classes.description}>{repo.description}</p>
+      <p>{repo.description}</p>
       {isFavourit ? (
-        <Button handlerOnClick={removeFromFavourite}>remove</Button>
+        <button
+          className={classes.button}
+          type="button"
+          onClick={removeFromFavourite}
+        >
+          remove
+        </button>
       ) : (
-        <Button handlerOnClick={addToFavourite}>add</Button>
+        <button
+          className={classes.button}
+          type="button"
+          onClick={addToFavourite}
+        >
+          add
+        </button>
       )}
     </div>
   );

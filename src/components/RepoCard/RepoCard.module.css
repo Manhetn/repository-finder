@@ -16,6 +16,7 @@
 }
 
 .container:hover {
+  /* cursor: pointer; */
   box-shadow: 0px 0px 4px #232323;
 }
 
@@ -60,15 +61,4 @@
 
 .button:active {
   box-shadow: 0px 0px 2px #232323;
-}
-
-.name,
-.description {
-  word-wrap: break-word;
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 16px;
-  }
 }

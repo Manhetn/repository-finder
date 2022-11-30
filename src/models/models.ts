@@ -139,9 +139,3 @@ export interface IRepository {
   watchers: number;
   default_branch: string;
 }
-
-export interface INavLink {
-  title: string;
-  href: string;
-  exact: boolean;
-}
